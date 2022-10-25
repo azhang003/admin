@@ -1,6 +1,6 @@
 /runtime/*
 /public/Upload/*
-/.idea
+/.idea/*
 /.vscode
 *.log
 .user.ini
