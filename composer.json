@@ -1,5 +1,5 @@
 {
-    "name": "kaadon/kaadonbaseadmin",
+    "name": "zhang/baseadmin",
     "description": "基于ThinkPHP6.0和layui的快速开发的后台管理系统。",
     "type": "project",
     "keywords": [
@@ -7,12 +7,12 @@
         "thinkphp",
         "admin"
     ],
-    "homepage": "http://easyadmin.99php.cn/",
+    "homepage": "http://www.ipioo.com",
     "license": "MIT",
     "authors": [
         {
-            "name": "kaadon",
-            "email": "kaadon@gmail.com"
+            "name": "zhang",
+            "email": "767320138@qq.com"
         }
     ],
     "require": {
