@@ -1,0 +1,35 @@
+{
+    "name": "usdtcloud/tronservice",
+    "type": "library",
+    "description": "UsdtCloud TronService for PHP",
+    "keywords": ["tron", "trx", "chain", "kaadon", "block"],
+    "homepage": "http://developer.usdt.cloud/",
+    "license": "MIT",
+    "require": {
+        "PHP": ">=7.1",
+        "sc0vu/web3.php": "^0.1",
+        "simplito/elliptic-php": "^1.0",
+        "stephenhill/base58": "^1.1",
+        "kornrunner/keccak": "~1.0",
+        "topthink/framework": "^6.0"
+    },
+    "authors": [
+        {
+            "name": "usdtcloud",
+            "email": "usdtcloud@gmail.com",
+            "homepage": "https://www.usdt.cloud"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Usdtcloud\\TronService\\": "src"
+        }
+    },
+    "extra": {
+        "think":{
+            "config":{
+                "tronservice": "config/tronservice.php"
+            }
+        }
+    }
+}

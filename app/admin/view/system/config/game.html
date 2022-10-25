@@ -1,0 +1,86 @@
+<form id="app-form" class="layui-form layuimini-form">
+
+    <div class="layui-form-item">
+        <input type="text" name="group" class="layui-input" lay-verify="required" value="game" style="display:none">
+        <input type="text" name="name" class="layui-input" lay-verify="required" value="game" style="display:none">
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">允许控制涨跌的账户uid（多个用'|'标签分隔开）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="open" placeholder="允许控制涨跌的账户uid（多个用'|'标签分隔开）" type="text"
+                   value="{:get_config('game','game','open')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">涨幅（用'|'标签分隔开）（现阶段以100000为基数）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="range" placeholder="涨幅（用'|'标签分隔开）（现阶段以100000为基数）" type="text"
+                   value="{:get_config('game','game','range')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">当前控盘局数（累计手动）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="totals" placeholder="当前控盘局数（累计手动）" type="text"
+                   value="{:get_config('game','game','totals')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">单笔最高交易</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="max" placeholder="单笔最高交易" type="number"
+                   value="{:get_config('game','game','max')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">单笔最低交易</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="min" placeholder="单笔最低交易" type="number"
+                   value="{:get_config('game','game','min')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">吞吐线(指需开奖金额/交易*赔率)</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="total" placeholder="吞吐线" type="number"
+                   value="{:get_config('game','game','total')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">5m吞吐线(指需开奖金额/交易*赔率)</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="five_total" placeholder="5m吞吐线" type="number"
+                   value="{:get_config('game','game','five_total')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">BTC5m吞吐线(指需开奖金额/交易*赔率)</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="btc_total" placeholder="BTC5m吞吐线" type="number"
+                   value="{:get_config('game','game','btc_total')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">吞吐控制(1开启；0关闭)</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="open_tu" placeholder="吞吐控制" type="number"
+                   value="{:get_config('game','game','open_tu')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">超出比例</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="proportion" placeholder="超出比例" type="number"
+                   value="{:get_config('game','game','proportion')}">
+        </div>
+    </div>
+
+    <div class="hr-line"></div>
+    <div class="layui-form-item text-center">
+        <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="system.config/save"
+                data-refresh="false">确认
+        </button>
+        <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+    </div>
+
+</form>

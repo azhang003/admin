@@ -1,0 +1,42 @@
+<div class="layuimini-container">
+    <form id="app-form" class="layui-form layuimini-form">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">收款人</label>
+            <div class="layui-input-block">
+                <input type="text" name="name" class="layui-input" lay-verify="required" placeholder="收款人"
+                       value="{$row.name}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">开户行</label>
+            <div class="layui-input-block">
+                <input type="text" name="back_title" class="layui-input" lay-verify="required" placeholder="开户行"
+                       value="{$row.back_title}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">账号/地址</label>
+            <div class="layui-input-block">
+                <input type="text" name="address" class="layui-input" lay-verify="required" placeholder="账号/地址"
+                       value="{$row.address}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">比例</label>
+            <div class="layui-input-block">
+                <input type="text" name="rate" class="layui-input" lay-verify="required" placeholder="比例"
+                       value="{$row.rate}">
+                <tip>例如1枚可兑换多少平台金额</tip>
+
+            </div>
+        </div>
+
+        <div class="hr-line"></div>
+        <div class="layui-form-item text-center">
+            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit>确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+        </div>
+
+    </form>
+</div>

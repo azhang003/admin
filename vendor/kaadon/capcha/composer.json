@@ -1,0 +1,36 @@
+{
+  "name": "kaadon/capcha",
+  "type": "library",
+  "description": "kaadon capcha for PHP",
+  "keywords": [
+    "capcha",
+    "kaadon"
+  ],
+  "homepage": "http://developer.kaadon.com/",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1"
+  },
+  "authors": [
+    {
+      "name": "kaadon",
+      "email": "kaadon@foxmail.com",
+      "homepage": "https://www.kaadon.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kaadon\\CapCha\\": "src"
+    },
+    "files": [
+      "src/helper/helper.php"
+    ]
+  },
+  "extra": {
+    "think":{
+      "config":{
+        "kaadon_captcha": "src/config/kaadon_captcha.php"
+      }
+    }
+  }
+}

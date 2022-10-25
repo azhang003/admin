@@ -1,0 +1,40 @@
+<div class="layuimini-container">
+    <div class="layuimini-main" id="app">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">网站设置</li>
+                <li>区块高度配置（更改时请联系开发人员）</li>
+                <li>推荐配置</li>
+                <li>上传配置</li>
+                <li>交易配置</li>
+                <li>活动配置</li>
+                <li>充提配置</li>
+
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    {include file="system/config/site" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/block" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/logo" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/upload" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/game" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/sizzler" /}
+                </div>
+                <div class="layui-tab-item">
+                    {include file="system/config/wallet" /}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

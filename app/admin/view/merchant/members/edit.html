@@ -1,0 +1,89 @@
+<div class="layuimini-container">
+    <form id="app-form" class="layui-form layuimini-form">
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">用户级别</label>
+            <div class="layui-input-block">
+                <select name="level">
+                    <option value="0" {if 0==$row.level}selected=""{/if}>普通用户(1级)</option>
+                    <option value="1" {if 1==$row.level}selected=""{/if}>VIP用户(2级)</option>
+                    <option value="2" {if 2==$row.level}selected=""{/if}>VIP大咖(3级)</option>
+                    <option value="3" {if 3==$row.level}selected=""{/if}>VIP创世(4级)</option>
+                    <option value="4" {if 4==$row.level}selected=""{/if}>VIP无极(5级)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-block">
+                <input type="text" name="password" class="layui-input" placeholder="新密码"
+                       value="">
+            </div>
+        </div>
+
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">新交易密码</label>
+            <div class="layui-input-block">
+                <input type="text" name="safeword" class="layui-input" placeholder="新交易密码"
+                       value="">
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">认证状态</label>
+            <div class="layui-input-block">
+                <select name="authen">
+                    <option value="0" {if 0==$row.authen}selected=""{/if}>未认证</option>
+                    <option value="1" {if 1==$row.authen}selected=""{/if}>认证通过</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">无信号控制</label>
+            <div class="layui-input-block">
+                <select name="signal">
+                    <option value="0" {if 0==$row.signal}selected=""{/if}>正常</option>
+                    <option value="1" {if 1==$row.signal}selected=""{/if}>开启单控</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">密码错误控制</label>
+            <div class="layui-input-block">
+                <select name="error_password">
+                    <option value="0" {if 0==$row.error_password}selected=""{/if}>正常</option>
+                    <option value="1" {if 1==$row.error_password}selected=""{/if}>开启单控</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">下注类型单控</label>
+            <div class="layui-input-block">
+                <select name="bet_type">
+                    <option value="0" {if 0==$row.bet_type}selected=""{/if}>正常</option>
+                    <option value="1" {if 1==$row.bet_type}selected=""{/if}>涨</option>
+                    <option value="2" {if 2==$row.bet_type}selected=""{/if}>跌</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="layui-form-item layui-form-text">
+            <label class="layui-form-label">下注增加尾数（例：1改为11）</label>
+            <div class="layui-input-block">
+                <input type="text" class="layui-input" name="bet_money" value="{$row.bet_money}">
+            </div>
+        </div>
+
+        <div class="hr-line"></div>
+        <div class="layui-form-item text-center">
+            <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit>确认</button>
+            <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,48 @@
+<form id="app-form" class="layui-form layuimini-form">
+
+    <div class="layui-form-item">
+        <input type="text" name="group" class="layui-input" lay-verify="required" value="sizzler" style="display:none">
+        <input type="text" name="name" class="layui-input" lay-verify="required" value="sizzler" style="display:none">
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">挖矿消耗原力</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="mining" placeholder="挖矿消耗原力" type="number"
+                   value="{:get_config('sizzler','sizzler','mining')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">每日恢复虚拟币数量</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="fictitious" placeholder="每日恢复虚拟币数量" type="number"
+                   value="{:get_config('sizzler','sizzler','fictitious')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">挖矿单次最少产出</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="mining_min" placeholder="挖矿单次最少产出" type="number"
+                   value="{:get_config('sizzler','sizzler','mining_min')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">挖矿单次最多产出</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="mining_max" placeholder="挖矿单次最多产出" type="number"
+                   value="{:get_config('sizzler','sizzler','mining_max')}">
+        </div>
+    </div>
+
+    <div class="hr-line"></div>
+    <div class="layui-form-item text-center">
+        <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="system.config/save"
+                data-refresh="false">确认
+        </button>
+        <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+    </div>
+
+</form>

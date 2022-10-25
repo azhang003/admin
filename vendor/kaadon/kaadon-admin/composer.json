@@ -1,0 +1,32 @@
+{
+    "name": "kaadon/kaadon-admin",
+    "description": "kaadonAdmin工具",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kaadon",
+            "email": "kaadon@gamil.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.1.0",
+        "doctrine/annotations": "^1.13.1",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.3.0",
+        "phpunit/phpunit": "^8.5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KaadonAdmin\\": "src",
+            "MockApp\\": "mock_app",
+            "Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox"
+    }
+}

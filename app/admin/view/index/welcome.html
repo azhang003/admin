@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="__STATIC__/admin/css/welcome.css?v={:time()}" media="all">
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12 layui-card">
+                <div class="layui-row layui-col-space15 ">
+                    <div class="layui-col-md12 ">
+                        <div class="">
+                            <div class="layui-card-header"><i class="fa fa-warning icon"></i>数据统计</div>
+                            <div class="">
+                                <div class="welcome-module">
+                                    <div class="layui-row layui-col-space20">
+                                        {volist name="data" id="vo"}
+                                            <div class="layui-col-xs3">
+                                                <div class="panel layui-bg-number">
+                                                    <div class="panel-body">
+                                                        <div class="panel-title">
+                                                            <span class="label pull-right layui-bg-blue">实时</span>
+                                                            <h5>{$vo.title}</h5>
+                                                        </div>
+                                                        <div class="panel-content">
+                                                            <h1 class="no-margins">{$vo.data}</h1>
+                                                            <small>当前分类总记录数</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {/volist}
+                                        <div class="layui-col-xs3">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>归集地址余额</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h5 class="no-margins">归集地址:{$address.primary_account_address}</h5>
+                                                        <h3 class="no-margins">TRX:{$address.master_account_TRX_balance}</h3>
+                                                        <h3 class="no-margins">USDT:{$address.balance_of_primary_account}</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>提现地址余额</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h5 class="no-margins">提现地址:{$address.withdrawal_account_address}</h5>
+                                                        <h3 class="no-margins">TRX:{$address.TRX_balance_of_withdrawal_account}</h3>
+                                                        <h3 class="no-margins">USDT:{$address.withdrawal_account_balance}</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="layui-col-xs3">
+                                            <div class="panel layui-bg-number">
+                                                <div class="panel-body">
+                                                    <div class="panel-title">
+                                                        <span class="label pull-right layui-bg-blue">实时</span>
+                                                        <h5>平台消耗trx</h5>
+                                                    </div>
+                                                    <div class="panel-content">
+                                                        <h1 class="no-margins">{$trx}</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

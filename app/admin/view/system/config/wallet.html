@@ -1,0 +1,153 @@
+<form id="app-form" class="layui-form layuimini-form">
+
+    <div class="layui-form-item">
+        <input type="text" name="group" class="layui-input" lay-verify="required" value="wallet" style="display:none">
+        <input type="text" name="name" class="layui-input" lay-verify="required" value="wallet" style="display:none">
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">充值最小限额</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="rechage_mix" placeholder="充值最小限额" type="number"
+                   value="{:get_config('wallet','wallet','rechage_mix')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">归集最小限额</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="collect_mix" placeholder="归集最小限额" type="number"
+                   value="{:get_config('wallet','wallet','collect_mix')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">充值限制到账额度</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="rechage_mast" placeholder="充值限制到账额度" type="number"
+                   value="{:get_config('wallet','wallet','rechage_mast')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">充值限制到账时间时间间隔（秒）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="rechage_time" placeholder="充值限制到账时间时间间隔" type="number"
+                   value="{:get_config('wallet','wallet','rechage_time')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现流失用户设置天数</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="mix_day" placeholder="提现流失用户设置天数" type="number"
+                   value="{:get_config('wallet','wallet','mix_day')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现短信验证码开启（0：关闭；1开启）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_sms" placeholder="提现短信验证码开启（0：关闭；1开启）" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_sms')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现短信验证码开启概率（100为100%）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_sms_probability" placeholder="提现短信验证码开启概率（100为100%）" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_sms_probability')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现自拍验证开启（0：关闭；1开启）</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_img" placeholder="提现自拍验证开启（0：关闭；1开启）" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_img')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现需手动打款额度</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="manually" placeholder="提现需手动打款额度" type="number"
+                   value="{:get_config('wallet','wallet','manually')}">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现必须实名限额</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_mix_authon" placeholder="提现必须实名限额" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_mix_authon')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现最小限额</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_mix" placeholder="提现最小限额" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_mix')}">
+        </div>
+    </div>
+
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现最大限额</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdraw_max" placeholder="提现最大限额" type="number"
+                   value="{:get_config('wallet','wallet','withdraw_max')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户升级所需累计交易天数</label>
+        <div class="layui-input-block">
+            <input type="text" name="member_day" class="layui-input" lay-verify="required" placeholder="用户升级所需累计交易天数"
+                   value="{:get_config('wallet','wallet','member_day')}">
+            <tip>用户升级所需累计交易天数。</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">用户对应级别每日赠送原力豆数</label>
+        <div class="layui-input-block">
+            <input type="text" name="give" class="layui-input" lay-verify="required" placeholder="用户对应级别每日赠送原力豆数"
+                   value="{:get_config('wallet','wallet','give')}">
+            <tip>用户对应级别每日赠送原力豆数。</tip>
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现手续比例</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="max" placeholder="提现手续比例" type="text"
+                   value="{:get_config('wallet','wallet','max')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">归集地址</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="collection_address" placeholder="归集地址" type="text"
+                   value="{:get_config('wallet','wallet','collection_address')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现地址</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="withdrawal_address" placeholder="提现地址" type="text"
+                   value="{:get_config('wallet','wallet','withdrawal_address')}">
+        </div>
+    </div>
+
+    <div class="layui-form-item">
+        <label class="layui-form-label">提现地址私钥</label>
+        <div class="layui-input-block">
+            <input class="layui-input" lay-verify="required" name="private_key" placeholder="提现地址私钥" type="text"
+                   value="{:get_config('wallet','wallet','private_key')}">
+        </div>
+    </div>
+
+    <div class="hr-line"></div>
+    <div class="layui-form-item text-center">
+        <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="system.config/save"
+                data-refresh="false">确认
+        </button>
+        <button type="reset" class="layui-btn layui-btn-primary layui-btn-sm">重置</button>
+    </div>
+
+</form>

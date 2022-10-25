@@ -1,0 +1,28 @@
+{
+  "name": "kaadon/uuid",
+  "type": "library",
+  "description": "kaadon Uuid for PHP",
+  "keywords": [
+    "Uuid",
+    "Uuids",
+    "kaadon"
+  ],
+  "homepage": "http://developer.kaadon.com/",
+  "license": "MIT",
+  "require": {
+    "PHP": ">=7.1",
+    "ramsey/uuid": "^4.1"
+  },
+  "authors": [
+    {
+      "name": "kaadon",
+      "email": "kaadon@foxmail.com",
+      "homepage": "https://www.kaadon.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kaadon\\Uuid\\": "src"
+    }
+  }
+}

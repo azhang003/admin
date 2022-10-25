@@ -1,0 +1,15 @@
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <table id="currentTable" class="layui-table layui-hide"
+               data-auth-add="{:auth('article.article/add')}"
+               data-auth-edit="{:auth('article.article/edit')}"
+               data-auth-delete="{:auth('article.article/delete')}"
+               data-auth-password="{:auth('article.article/password')}"
+               lay-filter="currentTable">
+        </table>
+    </div>
+</div>
+<script>
+    var Lang_identification = JSON.parse(`{:json_encode(config('lang.allow_lang_identification'),true)}`)
+    console.log(Lang_identification)
+</script>
