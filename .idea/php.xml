@@ -82,7 +82,5 @@
       <path value="$PROJECT_DIR$/vendor/qcloud/cos-sdk-v5" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
-    <option name="suggestChangeDefaultLanguageLevel" value="false" />
-  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
 </project>
